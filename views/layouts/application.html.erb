@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hotel Management</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body>
+    <nav style="margin-bottom: 20px;">
+      <%= link_to "Rooms", rooms_path %> |
+      <%= link_to "Guests", guests_path %> |
+      <%= link_to "Reservations", reservations_path %> |
+      <%= link_to "Services", services_path %>
+    </nav>
+
+    <%= yield %>
+  </body>
+</html>

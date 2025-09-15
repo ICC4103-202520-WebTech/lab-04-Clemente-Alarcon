@@ -1,0 +1,11 @@
+<h1>Reservations</h1>
+<ul>
+  <% @reservations.each do |reservation| %>
+    <li>
+      <%= link_to "Reservation ##{reservation.id}", reservation_path(reservation) %> —
+      Check-in: <%= reservation.check_in %>,
+      Check-out: <%= reservation.check_out %>,
+      Status: <%= reservation.status %>
+    </li>
+  <% end %>
+</ul>
